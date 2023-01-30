@@ -1,0 +1,144 @@
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --very-dark-cyan: hsl(156, 42%, 18%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+
+body {
+    background: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    align-items: center;
+    background: var(--white);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    max-height: 423px;
+    max-width: 550px;
+}
+
+.image__container {
+    max-height: 423px;
+    min-height: 100%;
+}
+
+.card__image {
+    border-radius: 8px 0 0 8px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 220px;
+    padding: 0 24px;
+}
+
+.card__content-heading {
+    color: var(--dark-grayish-blue);
+    font-size: .6875rem;
+    letter-spacing: .3125rem;
+    text-align: start;
+    text-transform: uppercase;
+}
+
+.card__content-large-heading {
+    color: var(--very-dark-blue);
+    font-family: 'Fraunces', serif;
+    font-size: 1.875rem;
+}
+
+.card__content-paragraph {
+    color: var(--dark-grayish-blue);
+    font-size: .8125rem;
+    line-height: 22px;
+}
+
+.card__content-price {
+    align-items: center;
+    display: flex;
+    gap: 18px;
+}
+
+.first-price {
+    color: var(--dark-cyan);
+    font-family: 'Fraunces', serif;
+    font-size: 1.875rem;
+}
+
+.second-price {
+    color: var(--dark-grayish-blue);
+    font-size: .8125rem;
+    text-decoration: line-through;
+}
+
+.btn {
+    align-items: center;
+    background: var(--dark-cyan);
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    display: flex;
+    font-weight: 700;
+    gap: 10px;
+    justify-content: center;
+    padding: 12px;
+}
+
+.btn:hover,
+.btn:active {
+    background: var(--very-dark-cyan);
+    cursor: pointer;
+}
+
+@media (max-width: 376px) {
+    .card {
+        flex-direction: column;
+        max-height: 765px;
+        width: 90vw;
+    }
+
+    .card__image {
+        display: none;
+    }
+
+    #mobile__image {
+        background-image: url(../images/image-product-mobile.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 8px 8px 0 0;
+        height: 250px;
+        width: 90vw;
+    }
+
+    .card__content {
+        max-width: 85%;
+        padding: 28px 0;
+    }
+
+    .btn {
+        padding: 16px;
+    }
+}
