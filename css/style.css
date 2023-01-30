@@ -112,7 +112,7 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 575px) {
     .card {
         flex-direction: column;
         max-height: 765px;
